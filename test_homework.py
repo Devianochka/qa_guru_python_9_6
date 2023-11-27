@@ -22,7 +22,6 @@ def test_dark_theme_by_time():
 current_time = time(hour=16)
 dark_theme_enabled_by_user = True
 
-
 if dark_theme_enabled_by_user:
     is_dark_theme = True
 elif dark_theme_enabled_by_user is None:
@@ -47,17 +46,12 @@ def test_find_suitable_user():
         {"name": "Maria", "age": 18},
     ]
 
-    # TODO найдите пользователя с именем "Olga"
     suitable_users = []
     for user in users:
         if user['name'] == 'Olga':
             suitable_users = user
     assert suitable_users == {'name': 'Olga', 'age': 45}
 
-
-
-
-    # TODO найдите всех пользователей младше 20 лет
     suitable_users = []
 
     for user in users:
@@ -67,8 +61,6 @@ def test_find_suitable_user():
         {"name": "Stanislav", "age": 15},
         {"name": "Maria", "age": 18},
     ]
-
-
 
 
 # Сделайте функцию, которая будет печатать
@@ -107,5 +99,5 @@ def go_to_companyname_homepage(page_url):
 
 def find_registration_button_on_login_page(page_url, button_text):
     actual_result = read_function_name(find_registration_button_on_login_page, page_url,
-                                                button_text)
+                                       button_text)
     assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
